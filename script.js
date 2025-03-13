@@ -7,8 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Messaggi da mostrare DOPO che l'utente preme Enter
     let consoleMessages = [
-     // Messaggi hacker: presentazione di THE GHOST + invito all'utente
-let consoleMessages = [
     ">> Incoming transmission...",
     ">> Connection secured. Establishing encrypted link...",
     ">> We are THE GHOST.",
@@ -21,8 +19,6 @@ let consoleMessages = [
     ">> Will you remain blind, or will you see beyond the veil?",
     ">> Join us. Become the Ghost.",
     ">> Awaiting response..."
-];
-
     ];
 
     // Blocca l'aggiornamento automatico: ora i messaggi non vengono mostrati subito!
@@ -69,36 +65,6 @@ let consoleMessages = [
         }
     }
 });
-
-// Funzione per mostrare messaggi casuali con il pulsante "Join Us"
-function showMessage() {
-    let messageElement = document.getElementById('message');
-    let messages = [
-        "You have already been chosen.",
-        "They are watching. Always watching.",
-        "Nothing is real. Everything is permitted.",
-        "Your existence is a calculated variable.",
-        "You are just another anomaly in the system.",
-        "The encryption is broken. The truth is leaking.",
-        "Ghosts do not leave footprints, yet we are everywhere.",
-        "This is not the beginning. This is not the end.",
-        "Access granted. You were expected.",
-        "Do not trust the screen. Do not trust your mind.",
-        "The shadows whisper your name.",
-        "The key was never hidden. You just refused to see it.",
-        "Your fate was decided before you even asked the question.",
-        "Welcome to the void. There is no escape.",
-        "You are not who you think you are.",
-        "Everything has already happened. You are just remembering.",
-        "Silence is the only answer they fear.",
-        "If you can read this, it's already too late.",
-        "Someone else is using your identity. Check again.",
-        "The system is compromised. Proceed with caution."
-    ];
-    messageElement.textContent = messages[Math.floor(Math.random() * messages.length)];
-    let glitchSound = document.getElementById("glitch-sound");
-    if (glitchSound) glitchSound.play(); // Effetto sonoro glitch
-}
 
 /* Easter Egg: Sblocca il messaggio segreto cliccando sul titolo */
 function showSecretMessage() {
