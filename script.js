@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     let consoleOutput = document.getElementById('console-output');
-    let enterPressed = false; // Controlla se Enter è già stato premuto
+    let enterPressed = false; // Flag per controllare se Enter è già stato premuto
 
     // Mostra il messaggio iniziale "Press Enter..."
     consoleOutput.innerHTML = '<p class="blink">>> Press Enter...</p>';
@@ -15,10 +15,10 @@ document.addEventListener('DOMContentLoaded', function () {
         ">> Connection secured. Awaiting further input..."
     ];
 
-    // Ascolta il tasto Enter e avvia il terminale SOLO se non è già stato premuto
+    // Blocca l'aggiornamento automatico: ora i messaggi non vengono mostrati subito!
     document.addEventListener('keydown', function (event) {
         if (event.key === "Enter" && !enterPressed) {
-            enterPressed = true; // Blocca il riavvio
+            enterPressed = true; // Blocca l'avvio multiplo
 
             // Cancella "Press Enter..."
             consoleOutput.innerHTML = "";
