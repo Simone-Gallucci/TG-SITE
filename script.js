@@ -37,20 +37,9 @@ function showMessage() {
     document.getElementById("glitch-sound").play();
 }
 
-/* Easter Egg: Sblocca il messaggio segreto */
-let secretCode = ['T', 'H', 'E', 'G', 'H', 'O', 'S', 'T'];
-let enteredKeys = [];
-
-document.addEventListener('keydown', function (event) {
-    enteredKeys.push(event.key.toUpperCase());
-
-    if (enteredKeys.length > secretCode.length) {
-        enteredKeys.shift();
-    }
-
-    if (JSON.stringify(enteredKeys) === JSON.stringify(secretCode)) {
-        document.getElementById('hidden-message').style.display = 'block';
-        document.getElementById('secret-text').textContent = "Access Granted: Follow the light...";
-        document.getElementById("glitch-sound").play();
-    }
-});
+/* Easter Egg: Sblocca il messaggio segreto cliccando sul titolo */
+function showSecretMessage() {
+    document.getElementById('hidden-message').style.display = 'block';
+    document.getElementById('secret-text').textContent = "Access Granted: Follow the light...";
+    document.getElementById("glitch-sound").play();
+}
