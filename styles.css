@@ -44,8 +44,8 @@ body {
     padding: 20px;
     margin: 20px auto;
     width: 80%;
-    height: 400px; /* Aumentato per mostrare più messaggi */
-    max-height: 400px; /* Assicura che non diventi più grande */
+    height: 450px; /* Aumentato per mostrare più messaggi */
+    max-height: 450px; /* Assicura che non diventi più grande */
     border: 2px solid #0f0;
     text-align: left;
     overflow-y: hidden; /* Nasconde la barra di scorrimento */
