@@ -2,10 +2,10 @@ document.addEventListener('DOMContentLoaded', function () {
     let consoleOutput = document.getElementById('console-output');
     let enterPressed = false; // Controlla se Enter è già stato premuto
 
-    // Mostra solo "Press Enter..." all'inizio
+    // Mostra il messaggio iniziale "Press Enter..."
     consoleOutput.innerHTML = '<p class="blink">>> Press Enter...</p>';
 
-    // Messaggi da mostrare dopo Enter (MODIFICA QUI)
+    // Messaggi da mostrare DOPO che l'utente preme Enter
     let consoleMessages = [
         ">> Establishing secure connection...",
         ">> Accessing encrypted files...",
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
         ">> Connection secured. Awaiting further input..."
     ];
 
-    // Ascolta la pressione del tasto Enter
+    // Ascolta il tasto Enter e avvia il terminale SOLO se non è già stato premuto
     document.addEventListener('keydown', function (event) {
         if (event.key === "Enter" && !enterPressed) {
             enterPressed = true; // Blocca il riavvio
@@ -23,12 +23,12 @@ document.addEventListener('DOMContentLoaded', function () {
             // Cancella "Press Enter..."
             consoleOutput.innerHTML = "";
 
-            // Avvia i messaggi
+            // Avvia la sequenza di messaggi digitati lentamente
             writeConsoleMessages();
         }
     });
 
-    // Funzione per scrivere i messaggi uno alla volta con effetto digitazione e suono
+    // Funzione per scrivere i messaggi con effetto digitazione
     function writeConsoleMessages() {
         let index = 0;
 
@@ -36,8 +36,10 @@ document.addEventListener('DOMContentLoaded', function () {
             if (index < consoleMessages.length) {
                 let p = document.createElement('p');
                 consoleOutput.appendChild(p);
+
                 typeText(p, consoleMessages[index], 0, function () {
-                    document.getElementById("terminal-beep")?.play(); // Riproduce il suono beep se disponibile
+                    let beepSound = document.getElementById("terminal-beep");
+                    if (beepSound) beepSound.play(); // Suono "beep" dopo ogni messaggio
                     index++;
                     setTimeout(typeMessage, 1500); // Pausa tra i messaggi
                 });
@@ -69,12 +71,14 @@ function showMessage() {
         "The revolution has begun."
     ];
     messageElement.textContent = messages[Math.floor(Math.random() * messages.length)];
-    document.getElementById("glitch-sound")?.play(); // Effetto sonoro glitch se disponibile
+    let glitchSound = document.getElementById("glitch-sound");
+    if (glitchSound) glitchSound.play(); // Effetto sonoro glitch
 }
 
 /* Easter Egg: Sblocca il messaggio segreto cliccando sul titolo */
 function showSecretMessage() {
     document.getElementById('hidden-message').style.display = 'block';
     document.getElementById('secret-text').textContent = "Access Granted: Follow the light...";
-    document.getElementById("glitch-sound")?.play();
+    let glitchSound = document.getElementById("glitch-sound");
+    if (glitchSound) glitchSound.play();
 }
