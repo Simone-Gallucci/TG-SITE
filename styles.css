@@ -96,3 +96,11 @@ body {
     color: #f00;
     font-size: 18px;
 }
+/* Blink per il testo "Press Enter" */
+.blink {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
