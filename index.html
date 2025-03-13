@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="matrix-overlay"></div> <!-- Effetto Matrix -->
     <div class="container">
-        <h1 class="glitch" data-text="THE GHOST">THE GHOST</h1>
+        <h1 class="glitch" data-text="THE GHOST" onclick="showSecretMessage()">THE GHOST</h1>
         <p class="description">We are the unseen, the unheard, the unstoppable.</p>
         
         <div class="terminal">
@@ -20,8 +21,6 @@
         <button class="btn" onclick="showMessage()">Join Us</button>
         <p id="message"></p>
 
-        <div class="matrix-effect"></div>
-
         <!-- Sezione nascosta per il messaggio segreto -->
         <div id="hidden-message" class="hidden">
             <p>*** Transmission Intercepted ***</p>
@@ -31,6 +30,7 @@
         <audio id="glitch-sound" src="glitch.mp3"></audio>
         <audio id="terminal-beep" src="beep.mp3"></audio>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
