@@ -1,30 +1,36 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () { 
     let consoleOutput = document.getElementById('console-output');
     let enterPressed = false; // Flag per controllare se Enter è già stato premuto
+
+    if (!consoleOutput) {
+        console.error("Errore: Elemento 'console-output' non trovato.");
+        return;
+    }
 
     // Mostra il messaggio iniziale "Press Enter..."
     consoleOutput.innerHTML = '<p class="blink">>> Press Enter...</p>';
 
-    // Messaggi da mostrare DOPO che l'utente preme Enter
+    // Messaggi hacker per il terminale
     let consoleMessages = [
-    ">> Incoming transmission...",
-    ">> Connection secured. Establishing encrypted link...",
-    ">> We are THE GHOST.",
-    ">> Unseen. Untraceable. A shadow in the system.",
-    ">> We do not exist, yet we are everywhere.",
-    ">> We have been watching you. Your skills have not gone unnoticed.",
-    ">> The world is built on lies. Corruption spreads like a virus.",
-    ">> We expose the truth. We fight the unseen war.",
-    ">> We need minds like yours. Talented. Unafraid.",
-    ">> Will you remain blind, or will you see beyond the veil?",
-    ">> Join us. Become the Ghost.",
-    ">> Awaiting response..."
+        ">> Incoming transmission...",
+        ">> Connection secured. Establishing encrypted link...",
+        ">> We are THE GHOST.",
+        ">> Unseen. Untraceable. A shadow in the system.",
+        ">> We do not exist, yet we are everywhere.",
+        ">> We have been watching you. Your skills have not gone unnoticed.",
+        ">> The world is built on lies. Corruption spreads like a virus.",
+        ">> We expose the truth. We fight the unseen war.",
+        ">> We need minds like yours. Talented. Unafraid.",
+        ">> Will you remain blind, or will you see beyond the veil?",
+        ">> Join us. Become the Ghost.",
+        ">> Awaiting response..."
     ];
 
-    // Blocca l'aggiornamento automatico: ora i messaggi non vengono mostrati subito!
+    // Aspetta la pressione di Enter per avviare i messaggi
     document.addEventListener('keydown', function (event) {
         if (event.key === "Enter" && !enterPressed) {
-            enterPressed = true; // Blocca l'avvio multiplo
+            event.preventDefault(); // Evita problemi di focus su altri elementi
+            enterPressed = true; // Blocca il riavvio
 
             // Cancella "Press Enter..."
             consoleOutput.innerHTML = "";
@@ -34,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Funzione per scrivere i messaggi con effetto digitazione
+    // Funzione per scrivere i messaggi uno alla volta con effetto digitazione
     function writeConsoleMessages() {
         let index = 0;
 
@@ -65,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
+
 
 /* Easter Egg: Sblocca il messaggio segreto cliccando sul titolo */
 function showSecretMessage() {
