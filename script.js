@@ -2,6 +2,9 @@ document.addEventListener('DOMContentLoaded', function () {
     let consoleOutput = document.getElementById('console-output');
     let enterPressed = false; // Controlla se Enter è già stato premuto
 
+    // Mostra solo "Press Enter..." all'inizio
+    consoleOutput.innerHTML = '<p class="blink">>> Press Enter...</p>';
+
     // Messaggi da mostrare dopo Enter (MODIFICA QUI)
     let consoleMessages = [
         ">> Establishing secure connection...",
@@ -12,24 +15,15 @@ document.addEventListener('DOMContentLoaded', function () {
         ">> Connection secured. Awaiting further input..."
     ];
 
-    // Messaggi casuali per "Join Us"
-    let randomMessages = [
-        "You have been watched.",
-        "We know who you are.",
-        "This is not a game.",
-        "You cannot escape the void.",
-        "The revolution has begun."
-    ];
-    
     // Ascolta la pressione del tasto Enter
     document.addEventListener('keydown', function (event) {
         if (event.key === "Enter" && !enterPressed) {
             enterPressed = true; // Blocca il riavvio
 
-            // Rimuove il messaggio iniziale "Press Enter..."
+            // Cancella "Press Enter..."
             consoleOutput.innerHTML = "";
 
-            // Avvia l'animazione dei messaggi
+            // Avvia i messaggi
             writeConsoleMessages();
         }
     });
@@ -43,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 let p = document.createElement('p');
                 consoleOutput.appendChild(p);
                 typeText(p, consoleMessages[index], 0, function () {
-                    document.getElementById("terminal-beep").play(); // Riproduce il suono beep
+                    document.getElementById("terminal-beep")?.play(); // Riproduce il suono beep se disponibile
                     index++;
                     setTimeout(typeMessage, 1500); // Pausa tra i messaggi
                 });
@@ -75,12 +69,12 @@ function showMessage() {
         "The revolution has begun."
     ];
     messageElement.textContent = messages[Math.floor(Math.random() * messages.length)];
-    document.getElementById("glitch-sound").play(); // Effetto sonoro glitch
+    document.getElementById("glitch-sound")?.play(); // Effetto sonoro glitch se disponibile
 }
 
 /* Easter Egg: Sblocca il messaggio segreto cliccando sul titolo */
 function showSecretMessage() {
     document.getElementById('hidden-message').style.display = 'block';
     document.getElementById('secret-text').textContent = "Access Granted: Follow the light...";
-    document.getElementById("glitch-sound").play();
+    document.getElementById("glitch-sound")?.play();
 }
