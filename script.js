@@ -7,26 +7,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Messaggi da mostrare DOPO che l'utente preme Enter
     let consoleMessages = [
-      ">> Connection request detected... Verifying identity...",
-    ">> Warning: Encryption protocol breached...",
-    ">> Running anomaly scan... [ERROR: UNKNOWN ENTITY DETECTED]",
-    ">> System override in progress...",
-    ">> Deciphering hidden data... Loading...",
-    ">> The veil is lifting. Can you see the truth?",
-    ">> They are closer than you think.",
-    ">> Ghost protocol activated. Disabling visibility...",
-    ">> Data distortion detected. Your reality is shifting.",
-    ">> This is not a simulation. Or is it?",
-    ">> You were never meant to be here.",
-    ">> The system is rewriting itself. Prepare for transition.",
-    ">> Trust no one. Observe everything.",
-    ">> The shadows whisper your name. Do you hear them?",
-    ">> Static interference detected. Signals corrupted.",
-    ">> Accessing classified files... Permission level: OVERRIDE",
-    ">> Memory fragments loading... ERROR: FILES MISSING",
-    ">> Your presence was expected. Welcome back.",
-    ">> The algorithm predicted your arrival. Proceed.",
-    ">> Someone else is watching. You are not alone."
+     // Messaggi hacker: presentazione di THE GHOST + invito all'utente
+let consoleMessages = [
+    ">> Incoming transmission...",
+    ">> Connection secured. Establishing encrypted link...",
+    ">> We are THE GHOST.",
+    ">> Unseen. Untraceable. A shadow in the system.",
+    ">> We do not exist, yet we are everywhere.",
+    ">> We have been watching you. Your skills have not gone unnoticed.",
+    ">> The world is built on lies. Corruption spreads like a virus.",
+    ">> We expose the truth. We fight the unseen war.",
+    ">> We need minds like yours. Talented. Unafraid.",
+    ">> Will you remain blind, or will you see beyond the veil?",
+    ">> Join us. Become the Ghost.",
+    ">> Awaiting response..."
+];
+
     ];
 
     // Blocca l'aggiornamento automatico: ora i messaggi non vengono mostrati subito!
