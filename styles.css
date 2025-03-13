@@ -39,27 +39,28 @@ body {
 
 /* Effetto terminale */
 /* Stile del terminale (ingrandito) */
+/* Stile del terminale (ingrandito) */
 .terminal {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.9); /* Più visibile rispetto al background */
     padding: 20px;
     margin: 20px auto;
-    width: 80%;
-    height: 450px; /* Aumentato per mostrare più messaggi */
-    max-height: 450px; /* Assicura che non diventi più grande */
-    border: 2px solid #0f0;
+    width: 85%;
+    height: 500px; /* Maggiore altezza */
+    max-height: 500px; /* Evita che diventi più grande */
+    border: 3px solid #0f0; /* Bordo più spesso per renderlo più visibile */
     text-align: left;
-    overflow-y: hidden; /* Nasconde la barra di scorrimento */
-    font-size: 14px;
+    overflow-y: hidden; /* Nasconde lo scrolling */
+    font-size: 18px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Mostra sempre i messaggi più recenti */
+    justify-content: flex-end; /* I messaggi appariranno dal basso */
 }
 
 /* Testo all'interno del terminale */
 .terminal p {
-    margin: 5px 0;
+    margin: 8px 0;
     white-space: pre;
-    font-size: 16px; /* Testo leggermente più grande per leggibilità */
+    font-size: 20px; /* Testo più grande per una maggiore leggibilità */
 }
 
 
