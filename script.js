@@ -7,12 +7,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Messaggi da mostrare DOPO che l'utente preme Enter
     let consoleMessages = [
-        ">> Establishing secure connection...",
-        ">> Accessing encrypted files...",
-        ">> Running silent protocol...",
-        ">> WARNING: Unauthorized access detected!",
-        ">> Encryption level: MAXIMUM",
-        ">> Connection secured. Awaiting further input..."
+      ">> Connection request detected... Verifying identity...",
+    ">> Warning: Encryption protocol breached...",
+    ">> Running anomaly scan... [ERROR: UNKNOWN ENTITY DETECTED]",
+    ">> System override in progress...",
+    ">> Deciphering hidden data... Loading...",
+    ">> The veil is lifting. Can you see the truth?",
+    ">> They are closer than you think.",
+    ">> Ghost protocol activated. Disabling visibility...",
+    ">> Data distortion detected. Your reality is shifting.",
+    ">> This is not a simulation. Or is it?",
+    ">> You were never meant to be here.",
+    ">> The system is rewriting itself. Prepare for transition.",
+    ">> Trust no one. Observe everything.",
+    ">> The shadows whisper your name. Do you hear them?",
+    ">> Static interference detected. Signals corrupted.",
+    ">> Accessing classified files... Permission level: OVERRIDE",
+    ">> Memory fragments loading... ERROR: FILES MISSING",
+    ">> Your presence was expected. Welcome back.",
+    ">> The algorithm predicted your arrival. Proceed.",
+    ">> Someone else is watching. You are not alone."
     ];
 
     // Blocca l'aggiornamento automatico: ora i messaggi non vengono mostrati subito!
