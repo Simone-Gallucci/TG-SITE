@@ -58,9 +58,9 @@ body {
 
 /* Testo all'interno del terminale */
 .terminal p {
-    margin: 8px 0;
+    margin: 6px 0;
     white-space: pre;
-    font-size: 20px; /* Testo più grande per una maggiore leggibilità */
+    font-size: 18px; /* Testo più grande per una maggiore leggibilità */
 }
 
 
