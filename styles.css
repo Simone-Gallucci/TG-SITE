@@ -45,8 +45,8 @@ body {
     padding: 20px;
     margin: 20px auto;
     width: 85%;
-    height: 500px; /* Maggiore altezza */
-    max-height: 500px; /* Evita che diventi più grande */
+    height: 400px; /* Maggiore altezza */
+    max-height: 400px; /* Evita che diventi più grande */
     border: 3px solid #0f0; /* Bordo più spesso per renderlo più visibile */
     text-align: left;
     overflow-y: hidden; /* Nasconde lo scrolling */
